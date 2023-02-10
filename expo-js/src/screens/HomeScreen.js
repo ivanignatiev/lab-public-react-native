@@ -1,13 +1,11 @@
 import * as React from 'react';
-import { Touchable, TouchableOpacity, View, Text } from 'react-native';
+import { TouchableOpacity, View, Text } from 'react-native';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
     return (
         <View>
-            <Text>E-mail:</Text>
-            <Text></Text>
-            <TouchableOpacity>
-                <Text>Edit</Text>
+            <TouchableOpacity onPress={() => { navigation.navigate('InputEmailScreen') } }>
+                <Text>Input Email Screen</Text>
             </TouchableOpacity>
         </View>
     )
